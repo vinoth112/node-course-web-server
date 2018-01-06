@@ -45,12 +45,19 @@ app.get('/about', (req,res) => {
         welcomeMessage: 'Welcome to about page'
     });
 })
+app.get('/projects', (req,res) => {
+    res.render('projects.hbs',{
+        pageTitle:'Projects Page',
+        welcomeMessage: 'Welcome to projects page'
+    });
+})
 
 app.get('/bad', (req,res) => {
     res.send({
         errorMessage:'Page not found'
     })
 })
+
 
 app.listen(port, () => {
     console.log(`The Server is up on port ${port}` )
